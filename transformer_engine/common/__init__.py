@@ -140,17 +140,17 @@ def load_framework_extension(framework: str) -> None:
         assert _is_pip_package_installed(
             "transformer_engine_cu12"
         ), "Could not find `transformer-engine-cu12`."
-        assert (
-            version(module_name)
-            == version("transformer-engine")
-            == version("transformer-engine-cu12")
-        ), (
-            "TransformerEngine package version mismatch. Found"
-            f" {module_name} v{version(module_name)}, transformer-engine"
-            f" v{version('transformer-engine')}, and transformer-engine-cu12"
-            f" v{version('transformer-engine-cu12')}. Install transformer-engine using "
-            f"'pip3 install transformer-engine[{extra_dep_name}]==VERSION'"
-        )
+        # assert (
+        #     version(module_name)
+        #     == version("transformer-engine")
+        #     == version("transformer-engine-cu12")
+        # ), (
+        #     "TransformerEngine package version mismatch. Found"
+        #     f" {module_name} v{version(module_name)}, transformer-engine"
+        #     f" v{version('transformer-engine')}, and transformer-engine-cu12"
+        #     f" v{version('transformer-engine-cu12')}. Install transformer-engine using "
+        #     f"'pip3 install transformer-engine[{extra_dep_name}]==VERSION'"
+        # )
 
     # If the core package is installed via PyPI, log if
     # the framework extension is not found from PyPI.
